@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/libs/org-mode/lisp")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
@@ -26,8 +25,8 @@
        #'(lambda nil (interactive) (org-todo "WAITING")))))
 
 (custom-set-variables
- '(org-agenda-files (quote ("~/todo.org")))
- '(org-default-notes-file "~/notes.org")
+ '(org-agenda-files (quote ("~/.org.d/todo.org")))
+ '(org-default-notes-file "~/.org.d/notes.org")
  '(org-agenda-ndays 7)
  '(org-deadline-warning-days 14)
  '(org-agenda-show-all-dates t)
