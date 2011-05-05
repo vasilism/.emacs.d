@@ -6,10 +6,16 @@
 
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/")
+(require 'color-theme)
+(color-theme-initialize)
 (require 'gentooish)
+(if window-system 
+    (color-theme-gentooish)
+  (color-theme-dark-laptop))
 (color-theme-gentooish)
 
 (require 'basic-customization)
+(require 'clojure-setup)
 (require 'org-mode-setup)
 (require 'mail-setup)
 
